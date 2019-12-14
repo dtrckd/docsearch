@@ -22,28 +22,30 @@ The context of the experiment is as follows:
 * Experiment **Spec** are defined individually for each scripts in the attribute `_default_expe` in the class headers.
 
 
-Typical usage:
+# Usage
 
-```bash
-pmk run --script fit --path path/to/your/pdfs/   # index your pdf documents, take a coffee
-pmk run --script search "your text search request"  # show relevant information
-```
 
-Or equivalently (aliases):
+First, index your pdf documents (take a coffee)
 
-```bash
-pmk -x fit --path path/to/your/pdfs/
-pmk -x search "your text search request"
-```
+    pmk run --script fit --path path/to/your/pdfs/   
+or equivalently: `pmk -x fit --path path/to/your/pdfs/`
 
-Or show only the first match:  `pmk -x search "your text search request" --limit 1`
+Then, search documents based on text content
 
-To add new models, new scripts, or specs,  you need to create it in the dedicated folder following the base class implementations.
+    pmk run --script search "your text search request"
+or equivalently: `pmk -x search "your text search request"`
 
-Then you can list some information about pymake objects:
+Show only the first match:
+
+    pmk -x search "your text search request" --limit 1
+
+
+List information about the project :
 
 * What experiments are there: `pmk -l spec`
 * What models are there: `pmk -l model`
 * What scripts are there: `pmk -l script`
 * Show signatures of methods in scripts ('ir' script)\: `pmk -l --script ir`
+
+To add new models, new scripts, or specs, you need to create them in the dedicated folder following the base class implementations.
 
