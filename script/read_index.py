@@ -86,6 +86,9 @@ class IR(ExpeFormat):
         expe = self.expe
         model = self.load_model(expe)
 
+        if not hits:
+            hits = [1]
+
         query = [query]
 
         res = model.search(self.sem(query), limit=expe.number_results)
