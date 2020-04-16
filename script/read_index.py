@@ -12,11 +12,12 @@ Search Script :
 ----------------
 """
 
+
 class IR(ExpeFormat):
-    _default_expe = {'model' : 'docm.tfidf',
-                     'highlight' : True,
-                     'number_highlight' : 3 ,
-                     'number_results' : 10 ,
+    _default_expe = {'model': 'docm.tfidf',
+                     'highlight': True,
+                     'number_highlight': 3,
+                     'number_results': 10,
                     }
 
     def _preprocess(self):
@@ -32,9 +33,9 @@ class IR(ExpeFormat):
             fullpath = hit['fullpath']
             score = hit.score
 
-            print('%d: '% (rank+1), colored(shortpath, 'green'), '%.2f' % score)
+            print('%d: ' % (rank+1), colored(shortpath, 'green'), '%.2f' % score)
             if 'title' in hit:
-                print('Title: %s: '% (colored(colored(hit['title'], 'bold'), 'red')))
+                print('Title: %s: ' % (colored(colored(hit['title'], 'bold'), 'red')))
             if expe.highlight:
                 text = extract_pdf(fullpath, page_limit=42)
                 if text:
@@ -44,18 +45,15 @@ class IR(ExpeFormat):
                     print(fragments)
                     print()
 
-
     def format_stats(self, model):
         ''' Show index statistics '''
         s = model.get_reader()
         ndoc = s.doc_count()
-        print('Number of documents: %d' %(ndoc))
+        print('Number of documents: %d' % (ndoc))
         #'mean /var  size of content'
         # Tree based on path / graph based on citation !
         #'waht field out there and type'
         s.close()
-
-
 
     def sem(self, query):
         ''' Query semantics. '''
@@ -68,10 +66,8 @@ class IR(ExpeFormat):
             else:
                 squery.append(q)
 
-
         squery = ' '.join(squery)
         return squery
-
 
     def search(self, *query):
         expe = self.expe
@@ -109,11 +105,8 @@ class IR(ExpeFormat):
         res = model.search(self.sem(query), field='authors', limit=expe.number_results)
         self.format_results(res)
 
-
     def stats(self):
         expe = self.expe
         model = self.load_model(expe)
 
         self.format_stats(model)
-
-
