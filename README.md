@@ -27,13 +27,12 @@ The context of the experiment is as follows:
 
 First, index your pdf documents (take a coffee)
 
-    pmk run --script fit --path path/to/your/pdfs/   
-or equivalently: `pmk -x fit --path path/to/your/pdfs/`
+    pmk -x fit --path path/to/your/pdfs/   
 
 Then, search documents based on text content
 
-    pmk run --script search "your text search request"
-or equivalently: `pmk -x search "your text search request"`
+    pmk -x search "your text search request"
+
 
 Show only the first match:
 
