@@ -8,13 +8,14 @@ Fit Script :
 ----------------
 """
 
+
 class fit(ExpeFormat):
 
-    _default_expe = {'model' : 'docm.tfidf',
-                     'path' : '~/Desktop/workInProgress/networkofgraphs/papers',
-                     'exclude_path' : ['/figures/', '/fig/', '/img/'],
-                     'reset' : False,
-                     'extract_structure' : False,
+    _default_expe = {'model': 'docm.tfidf',
+                     'path': '~/main/networkofgraphs/papers',
+                     'exclude_path': ['/figures/', '/fig/', '/img/'],
+                     'reset': False,
+                     'extract_structure': False,
                     }
 
     def _preprocess(self):
@@ -25,7 +26,6 @@ class fit(ExpeFormat):
 
     def _postprocess(self):
         pass
-
 
     def __call__(self):
         expe = self.expe
@@ -40,5 +40,3 @@ class fit(ExpeFormat):
             pass
         finally:
             model.close()
-
-

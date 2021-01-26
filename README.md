@@ -1,5 +1,5 @@
 
-**Docsearch** is a self-hosted search engine for your pdf documents based on [pmk](https://github.com/dtrckd/pymake) and [Whoosh](https://whoosh.readthedocs.io/en/latest/).
+**Docsearch** is a self-hosted search engine for your pdf documents based on [pmk](https://github.com/dtrckd/pymake) and [Whoosh](https://github.com/mchaput/whoosh).
 
 # Install
 
