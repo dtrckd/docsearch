@@ -3,7 +3,7 @@
 
 # Install
 
-You may need the following packages: `apt-get install poppler-utils`
+You may need the following packages: `apt-get install poppler-utils default-jdk`
 
 Clone the repo and enter inside:
 

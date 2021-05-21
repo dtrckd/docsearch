@@ -5,7 +5,8 @@ setup: dependancy cermine
 	pmk update
 
 dependancy:
-	pip3 install --user beautifulsoup4 nltk
+	pip install --user beautifulsoup4 nltk
+	pip install -r requirements.txt
 	#sudo apt-get install poppler-utils
 	echo "Who will need the program called \`pdftotext' in the package \`poppler-utils' (debian)."
 	python3 -c 'import nltk; nltk.download("stopwords")'

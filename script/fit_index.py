@@ -30,6 +30,8 @@ class fit(ExpeFormat):
     def __call__(self):
         expe = self.expe
         model = self.load_model(expe)
+        print(self.expe.extract_structure)
+        exit()
 
         if expe.reset is True:
             ask_sure_exit('reset option will destroy all the indexes, sure [y/n]?')

@@ -23,7 +23,7 @@ class IR(ExpeFormat):
     def _preprocess(self):
         pass
 
-    def format_results(self, results):
+    def _format_results(self, results):
         ''' Show query  search results '''
         expe = self.expe
         startchar, endchar = colored('splitme', 'bold').split('splitme')
@@ -45,7 +45,7 @@ class IR(ExpeFormat):
                     print(fragments)
                     print()
 
-    def format_stats(self, model):
+    def _format_stats(self, model):
         ''' Show index statistics '''
         s = model.get_reader()
         ndoc = s.doc_count()
@@ -74,7 +74,7 @@ class IR(ExpeFormat):
         model = self.load_model(expe)
 
         res = model.search(self.sem(query), limit=expe.number_results)
-        self.format_results(res)
+        self._format_results(res)
 
         print('total matched: %d' % (model._last_total_match))
 
@@ -103,10 +103,10 @@ class IR(ExpeFormat):
         model = self.load_model(expe)
 
         res = model.search(self.sem(query), field='authors', limit=expe.number_results)
-        self.format_results(res)
+        self._format_results(res)
 
     def stats(self):
         expe = self.expe
         model = self.load_model(expe)
 
-        self.format_stats(model)
+        self._format_stats(model)

@@ -81,7 +81,7 @@ class tfidf(IndexManager):
         super().__init__(default_index='document')
 
     def doc_yielder(self, path):
-        ''' find all pdf and yield do2bow doc '''
+        ''' find all pdf and yield doc2bow doc '''
 
         path = os.path.expanduser(path)
 
