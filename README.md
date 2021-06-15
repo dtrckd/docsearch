@@ -29,6 +29,7 @@ The context of the experiment is as follows:
 First, index your pdf documents (take a coffee)
 
     pmk -x fit --path path/to/your/pdfs/   
+
     # To index trying to extract title, authors and more feature from article (see [cermine](cermine.ceon.pl))
     pmk -x fit --path path/to/your/pdfs/ --extract-feature
 
