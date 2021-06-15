@@ -30,7 +30,9 @@ First, index your pdf documents (take a coffee)
 
     pmk -x fit --path path/to/your/pdfs/   
 
-    # To index trying to extract title, authors and more feature from article (see [cermine](cermine.ceon.pl))
+Alternatively, you can turn on features extraction (much slower), using [cermine](cermine.ceon.pl).
+
+    # To index trying to extract title, authors and publication date.
     pmk -x fit --path path/to/your/pdfs/ --extract-feature
 
 Then, search documents based on text content
