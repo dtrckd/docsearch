@@ -12,11 +12,11 @@ Clone the repo and enter inside:
 
 # Overview
 
-This repo provide a  **Search Engine** experience which follows the pymake design pattern.
+This repo provide **Search Engine** experience which follows the pymake design pattern.
 
-The context of the experiment is as follows:
-* **Data**: documents to search-in are pdf documents (like articles for example),
-* **Model**: A bm25 model, that assumes a information model of bag of words representation.
+The context of this [Pymake](https://github.com/dtrckd/pymake) program is as follows:
+* **Data**: documents to search-in are pdf documents (like articles for example), located in your hardrive,
+* **Model**: A BM25 model, that assumes a information model of bag of words representation.
 * **Script**: There are two scripts:
     + a fit script that builds the index of the *input data*,
     + a search script that returns relevant documents, given a *query*.
@@ -25,6 +25,8 @@ The context of the experiment is as follows:
 
 # Usage
 
+
+###### The "fit" script
 
 First, index your pdf documents (take a coffee)
 
@@ -35,6 +37,9 @@ Alternatively, you can turn on features extraction (much slower), using [cermine
     # To index trying to extract title, authors and publication date.
     pmk -x fit --path path/to/your/pdfs/ --extract-feature
 
+
+###### The "search" script
+
 Then, search documents based on text content
 
     pmk -x search "your text search request"
@@ -44,6 +49,8 @@ Show only the first match:
 
     pmk -x search "your text search request" --limit 1
 
+
+# Pymake tips
 
 List information about the project :
 
