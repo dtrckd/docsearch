@@ -26,7 +26,7 @@ The context of this [Pymake](https://github.com/dtrckd/pymake) program is as fol
 # Usage
 
 
-###### The "fit" script
+##### The "fit" script
 
 First, index your pdf documents (take a coffee)
 
@@ -38,7 +38,7 @@ Alternatively, you can turn on features extraction (much slower), using [cermine
     pmk -x fit --path path/to/your/pdfs/ --extract-feature
 
 
-###### The "search" script
+##### The "search" script
 
 Then, search documents based on text content
 
